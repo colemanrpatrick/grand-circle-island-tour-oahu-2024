@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+      
+        <link href="css/main.css" rel="stylesheet" />
+        <link href="css/home.css" rel="stylesheet" />
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <title>grand circle island tour</title>
+      </head>
+</head>
+<body>
+
+    <header id="header">
+        <div id="header-top">
+          <ul>
+            <li id="phone">
+              <a href="tel:+18664829775" class="phone">(toll free) 1-866-482-9775</a>
+              <a href="tel:+18088922082" class="phone">(local) 808-892-2082</a>
+            </li>
+            <li id="book-now-main">
+              <a href="/reservations.htm"><span class="material-symbols-outlined">calendar_month</span>book now</a>
+            </li>  
+          </ul>
+        </div>
+        <ul id="header-main">
+          <li id="logo">
+            <a href="/"><img src="images/gcitoahulogonew.png" alt=""></a>
+          </li>
+          <li id="main-nav">
+            <nav>
+              <a href="tours.htm">tours</a>
+              <a href="about.htm">About</a>
+              <a href="blog.htm">Blog</a>
+              <a href="faq.htm">FAQ</a>
+              <a href="contact.htm">Contact</a>
+              <a href="cart/edit" class="cart-link"><span class="material-symbols-outlined">shopping_cart</span>Cart</a>
+            </nav>
+          </li>
+          <button type="button" name="button" class="menu-btn"
+            onclick="idToggle('menu-btn','active');idToggle('main-nav','active')" id="menu-btn">
+            <hr class="menu-btn-hr-1" />
+            <hr class="menu-btn-hr-2" />
+            <hr class="menu-btn-hr-3" />
+          </button>
+        </ul>
+      </header>
+
+<!-- ======= -->
+    <div id="hero">
+        <div id="hero-top">
+          <div id="heading">
+            <h1>the best circle
+            tours on oahu</h1>
+          </div>
+          <div id="cta">
+            <p>save up to <b>15%</b><br>
+            off oahu tours</p> 
+            <a href="">browse tours</a>
+          </div>
+        </div>
+    </div>
+<!-- ============== -->
+    <div id="tour-details">
+        <div class="description"><p>sights and stops<span>*</span></p></div>
+        <div id="tour-slider">
+            <div id="tour-slider-nav">
+                <button class="tour-slide-nav-button active" onclick="pageToggle(1,'tour-slide');pageToggle(1,'tour-slide-nav-button')">diamond head <span class="material-symbols-outlined">explore</span></button>
+                <button class="tour-slide-nav-button" onclick="pageToggle(2,'tour-slide');pageToggle(2,'tour-slide-nav-button')">halona blowhole <span class="material-symbols-outlined">explore</span></button>
+                <button class="tour-slide-nav-button" onclick="pageToggle(3,'tour-slide');pageToggle(3,'tour-slide-nav-button')">byodo-in temple <span class="material-symbols-outlined">explore</span></button>
+                <button class="tour-slide-nav-button" onclick="pageToggle(4,'tour-slide');pageToggle(4,'tour-slide-nav-button')">mokolii <span class="material-symbols-outlined">explore</span></button>
+                <button class="tour-slide-nav-button" onclick="pageToggle(5,'tour-slide');pageToggle(5,'tour-slide-nav-button')">north shore <span class="material-symbols-outlined">explore</span></button>
+            </div>
+            <div id="tour-slides">
+                    <div data-img="" class="tour-slide active">
+                        <button class="tour-slide-back" type="button" onclick="pageToggle(4,'tour-slide');pageToggle(4,'tour-slide-nav-button')"><span class="material-symbols-outlined">chevron_left</span></button>
+                            <img src="images/home-gallery/daimondhead.jpg" alt="">
+                            <article>
+                                <a href="tours">                   
+                               <h2>diamond head <span class="material-symbols-outlined">pin_drop</span></h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolorum assumenda molestias quam rem deserunt explicabo esse cumque animi quidem.</p>
+                                <span>tours</span>
+                                </a>
+                            </article>
+                        <button class="tour-slide-fwd" type="button" onclick="pageToggle(2,'tour-slide');pageToggle(2,'tour-slide-nav-button')"><span class="material-symbols-outlined">chevron_right</span></button>
+                    </div>
+                    <div data-img="" class="tour-slide">
+                        <button class="tour-slide-back" type="button" onclick="pageToggle(1,'tour-slide');pageToggle(1,'tour-slide-nav-button')"><span class="material-symbols-outlined">chevron_left</span></button>
+                            <img src="images/home-gallery/Halona_Blowhole.jpg" alt="">
+                            <article>
+                                <a href="tours">                   
+                               <h2>Halona Blowhole <span class="material-symbols-outlined">pin_drop</span></h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolorum assumenda molestias quam rem deserunt explicabo esse cumque animi quidem.</p>
+                                <span>tours</span>
+                                </a>
+                            </article> 
+                        <button class="tour-slide-fwd" type="button" onclick="pageToggle(3,'tour-slide');pageToggle(3,'tour-slide-nav-button')"><span class="material-symbols-outlined">chevron_right</span></button>
+                    </div>
+                    <div data-img="" class="tour-slide">
+                        <button class="tour-slide-back" type="button" onclick="pageToggle(2,'tour-slide');pageToggle(2,'tour-slide-nav-button')"><span class="material-symbols-outlined">chevron_left</span></button>
+                            <img src="images/home-gallery/byodo-in.png" alt="">
+                            <article> 
+                                <a href="tours">                  
+                               <h2>Byodo-in Temple <span class="material-symbols-outlined">pin_drop</span></h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolorum assumenda molestias quam rem deserunt explicabo esse cumque animi quidem.</p>
+                                <span>tours</span>
+                                </a>
+                            </article>
+                        <button class="tour-slide-fwd" type="button" onclick="pageToggle(4,'tour-slide');pageToggle(4,'tour-slide-nav-button')"><span class="material-symbols-outlined">chevron_right</span></button>
+                    </div>
+                    <div data-img="" class="tour-slide">
+                        <button class="tour-slide-back" type="button" onclick="pageToggle(3,'tour-slide');pageToggle(3,'tour-slide-nav-button')"><span class="material-symbols-outlined">chevron_left</span></button>
+                            <img src="images/home-gallery/Mokolii.png" alt="">
+                            <article>
+                               <a href="tours">                   
+                               <h2>mokolii <span class="small">aka chinamans hat</span> <span class="material-symbols-outlined">pin_drop</span></h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolorum assumenda molestias quam rem deserunt explicabo esse cumque animi quidem.</p>
+                                <span>tours</span>
+                                </a>
+                            </article>
+                        <button class="tour-slide-fwd" type="button" onclick="pageToggle(5,'tour-slide');pageToggle(5,'tour-slide-nav-button')"><span class="material-symbols-outlined">chevron_right</span></button>
+                    </div>
+                    <div data-img="" class="tour-slide">
+                        <button class="tour-slide-back" type="button" onclick="pageToggle(4,'tour-slide');pageToggle(4,'tour-slide-nav-button')"><span class="material-symbols-outlined">chevron_left</span></button>
+                            <img src="images/home-gallery/northshore.jpg" alt="">
+                            <article>
+                               <a href="tours">                   
+                               <h2>north shore <span class="material-symbols-outlined">pin_drop</span></h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolorum assumenda molestias quam rem deserunt explicabo esse cumque animi quidem.</p>
+                                <span>tours</span>
+                                </a>
+                            </article>
+                        <button class="tour-slide-fwd" type="button" onclick="pageToggle(1,'tour-slide');pageToggle(1,'tour-slide-nav-button')"><span class="material-symbols-outlined">chevron_right</span></button>
+                    </div>
+            </div>
+        </div>
+        <div id="additional-tour-details">
+            <!-- <div id="tours-stop-description"><p>more tour sights<span>*</span></p></div> -->
+            <ul class="accordion">
+                <li class="tab active"><h2 onclick="tabToggle(this,'tab')">kahala estates <span class="material-symbols-outlined">pin_drop</span></h2>
+                    <article class="content"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam rem ratione nobis, 
+                        veritatis itaque corrupti quod ex? Eum sit quo accusantium iste accusamus deserunt ipsum odit sed assumenda, alias amet.</p><br>
+                        <a href="reservations.html">tours</a>
+                    </article>
+                    </li>
+                    <li class="tab"><h2 onclick="tabToggle(this,'tab')">hanauma bay <span class="material-symbols-outlined">pin_drop</span></h2>
+                    <article class="content"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam rem ratione nobis, 
+                        veritatis itaque corrupti quod ex? Eum sit quo accusantium iste accusamus deserunt ipsum odit sed assumenda, alias amet.</p><br>
+                        <a href="reservations.html">tours</a>
+                    </article>
+                    </li>
+                    <li class="tab"><h2 onclick="tabToggle(this,'tab')">waimanalo <span class="material-symbols-outlined">pin_drop</span></h2>
+                    <article class="content"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam rem ratione nobis, 
+                        veritatis itaque corrupti quod ex? Eum sit quo accusantium iste accusamus deserunt ipsum odit sed assumenda, alias amet.</p><br>
+                        <a href="reservations.html">tours</a>
+                    </article>
+                    </li>
+                    <li class="tab"><h2 onclick="tabToggle(this,'tab')">nuuanu pali <span class="material-symbols-outlined">pin_drop</span></h2>
+                    <article class="content"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam rem ratione nobis, 
+                        veritatis itaque corrupti quod ex? Eum sit quo accusantium iste accusamus deserunt ipsum odit sed assumenda, alias amet.</p><br>
+                        <a href="reservations.html">tours</a>
+                    </article>
+                    </li>
+                    <li class="tab"><h2 onclick="tabToggle(this,'tab')">kualoa ranch <span class="material-symbols-outlined">pin_drop</span></h2>
+                    <article class="content"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam rem ratione nobis, 
+                        veritatis itaque corrupti quod ex? Eum sit quo accusantium iste accusamus deserunt ipsum odit sed assumenda, alias amet.</p><br>
+                        <a href="reservations.html">tours</a>
+                    </article>
+                    </li>
+                    <li class="tab"><h2 onclick="tabToggle(this,'tab')">laie mormon temple <span class="material-symbols-outlined">pin_drop</span></h2>
+                    <article class="content"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam rem ratione nobis, 
+                        veritatis itaque corrupti quod ex? Eum sit quo accusantium iste accusamus deserunt ipsum odit sed assumenda, alias amet.</p><br>
+                        <a href="reservations.html">tours</a>
+                    </article>
+                    </li>
+                    <li class="tab"><h2 onclick="tabToggle(this,'tab')">dole plantation <span class="material-symbols-outlined">pin_drop</span></h2>
+                    <article class="content"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam rem ratione nobis, 
+                        veritatis itaque corrupti quod ex? Eum sit quo accusantium iste accusamus deserunt ipsum odit sed assumenda, alias amet.</p><br>
+                        <a href="reservations.html">tours</a>
+                    </article>
+                    </li>
+             </ul>
+        </div>
+        <!--====================-->
+        <aside><a href="/tours.html">* not all tours have the same stops. Be sure to Check the tour stop lists</a></aside>
+    </div>
+<!--====================-->
+    <div id="hero-bottom">
+        <div class="description"><p>popular tours</p></div>
+        <div id="hero-slider">
+            <a data-img="" target="_blank" class="hero-slide active" id="slide-1">
+              <img src="images/grandcircleislandtour-banner.jpg" alt="">
+              <div class="hero-slider-content">
+                <h2>Polynesian Adventure Tours</h2>
+                <h3>Oahu Grand Circle Island Tour</h3>
+                <ul>
+                  <li>was<span class="strikethrough">$136.13</span></li>
+                  <li>from<span>$112.00</span></li>
+                </ul>
+                <button href="/tour.html">
+                  <span>learn more</span>
+                  <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+              </div>
+            </a>
+        </div>
+    </div>
+<!--====================-->
+<div id="why-book-with">
+    <h2>why book with us?</h2>
+    <ul>
+      <li>
+        <div class="booking-details">
+          <div class="booking-img-container">
+            <img src="images/guarantee-icons.png" alt="" style="left:0;top:0;">
+          </div>
+          <h3>Secure Shopping</h3>
+          <p>Safe, secure online booking system with validated privacy protection.</p>
+        </div>
+      </li>
+      <li>
+        <div class="booking-details">
+          <div class="booking-img-container">
+            <img src="images/guarantee-icons.png" alt="" style="left:-11em;top:0;">
+          </div>
+          <h3>Advance Booking<br />Satisfaction</h3>
+          <p>Avoid sellouts and price increases. Relax knowing your luau tickets are reserved and guaranteed.</p>
+        </div>
+      </li>
+      <li>
+        <div class="booking-details">
+          <div class="booking-img-container">
+            <img src="images/guarantee-icons.png" alt="" style="left:-16.5em;top:0;">
+          </div>
+          <h3>Friendly Support</h3>
+          <p>Our staff will answer any questions you may have and ensure 100% satisfaction.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+<!--====================-->
+
+<footer class="footer">
+
+    <a href="#" id="logo-footer">
+      <img src="images/gcitoahulogonew.png" alt="">
+    </a>
+
+  <div class="social">
+    <p>follow us</p>
+      <ul>
+        <li><a href=""><img src="images/youtube.svg" alt=""></a></li>
+        <li><a href=""><img src="images/facebook.svg" alt=""></a></li>
+        <li><a href=""><img src="images/instagram.svg" alt=""></a></li>
+        <li><a href=""><img src="images/twitter.svg" alt=""></a></li>
+      </ul>
+  </div>
+  <section>
+    <ul>
+      <li><b>navigation</b></li>
+      <li> <a href="reservations.htm">tours</a></li> 
+      <li> <a href="#">home</a> </li>
+      <li> <a href="#">contact</a> </li>
+      <li> <a href="#">about us</a> </li>
+      <li> <a href="#">cart</a> </li>
+    </ul>
+    <ul>
+      <li><b>site info</b></li>
+      <li> <a href="#">faq</a> </li>
+      <li> <a href="#">site map</a> </li>
+      <li> <a href="#">privacy policy</a> </li>
+      <li> <a href="#">terms</a> </li>
+      <li> <a href="#">login</a> </li>
+    </ul>
+  </section>
+  <p>Copyright (c) 2024 hawaii discount All Rights Reserved.</p>
+</footer>
+
+
+</body>
+
+<!-- <script src="js/slider.js"></script> -->
+<script src="js/home.js"></script>
+<script src="js/toggle.js"></script>
+</html>

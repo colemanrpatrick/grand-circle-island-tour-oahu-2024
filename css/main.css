@@ -1,0 +1,600 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
+a {
+  text-decoration: none !important;
+}
+.material-symbols-outlined{
+  font-size: 1em;
+}
+span:not(.material-symbols-outlined),
+p,
+a,
+li,
+dd,
+dt,
+td,
+h2,
+h3,
+h4{
+  font-family: "Josefin Sans", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background: #ffe5e8;
+}
+.strikethrough{
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+body {
+  font-size: 18px;
+}
+@media (max-width: 1250px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media(max-width:400px){
+    body {
+        font-size: 12px;
+    }
+}
+/*===== header =====*/
+/*==== nav ====*/
+#header {
+	background: rgb(250, 240, 202);
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 998;
+}
+#header-top {
+  width: 100%;
+  background: #F4D35E;
+}
+#header-top ul{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1em;
+  display: table;
+}
+#phone {
+  display: table-cell;
+  width: 60%;
+  vertical-align: middle;
+}
+#book-now-main {
+  display: table-cell;
+  width: 40%;
+  text-align: right;
+  vertical-align: middle;
+}
+.phone {
+  color: #F95738;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.25em;
+  margin-right: 1em;
+  font-weight: bold;
+}
+#book-now-main a {
+  color: #F95738;
+  font-weight: bold;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-size: 1.25em;
+}
+@media(max-width:450px){
+  .phone{
+    font-size: 1.15em;
+    margin-top: 0.5em;
+    color: #0d3b66;
+  }
+}
+#book-now-main .material-icons {
+  vertical-align: bottom;
+}
+.cart-link .material-icons {
+  vertical-align: sub;
+  font-size: 1em;
+}
+#header-main {
+  width: 100%;
+  display: table;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  background: #FAF0CA;
+  padding: 1.5em;
+}
+#logo img {
+  width: 10em;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  z-index: 998;
+}
+#logo {
+  display: table-cell;
+  width: 33%;
+  text-align: left;
+  vertical-align: middle;
+}
+#logo a {
+  display: block;
+}
+#logo img{
+  
+}
+#main-nav {
+  list-style-type: none;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+}
+#main-nav nav {
+  vertical-align: middle;
+}
+#main-nav nav a {
+  color: #0D3B66;
+  font-size: 1em;
+  margin-right: 1em;
+  display: inline-block;
+  font-size: 1.15em;
+  transition: 0.3s;
+  text-transform: capitalize;
+}
+#main-nav nav a:hover{
+  color: #f95738;
+}
+#main-nav nav a:hover{
+  text-shadow: 0em 0em 0.5em white;
+}
+.menu-btn {
+  position: absolute;
+  width: 2.75em;
+  height: 2em;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 998;
+  background-color: transparent;
+  border: 0;
+  color: #0D3B66;
+  right: 1em;
+  display: none;
+  top: 1.5em;
+}
+.menu-btn hr {
+  display: block;
+  width: 100%;
+  height: 3px;
+  transition: 0.3s;
+  position: absolute;
+  border: 2px solid #0D3B66;
+}
+.menu-btn-hr-1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+}
+.menu-btn-hr-2 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu-btn-hr-3 {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+}
+.menu-btn.active .menu-btn-hr-1 {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.menu-btn.active .menu-btn-hr-2 {
+  opacity: 0;
+}
+.menu-btn.active .menu-btn-hr-3 {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+@media (max-width: 750px) {
+  .menu-btn {
+    display: block;
+  }
+  #main-nav{
+    width: 100%;
+    display: none;
+    background-color: #0d3b66e3;
+    position: absolute;
+    right: 0;
+    top: 4.5em;
+    padding: 1em;
+    z-index: 997;
+  }
+  #main-nav.active{
+    display: block;
+    height: 26em;
+  }
+  #main-nav nav a{
+    display: block;
+    width: 100%;
+    padding: 1em;
+    font-size: 1.25em;
+    color: white;
+    text-shadow: 0;
+  }
+  #logo{
+    width: 60%;
+  }
+}
+
+
+#why-book-with{
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  background-color:#faf0ca;
+  padding-bottom: 3em;
+  margin-top: 10em;
+}
+@media (max-width: 650px) {
+  #why-book-with{
+    width: 100%;
+  }
+}
+
+#why-book-with h2 {
+color: #f4d35e;
+font-size: 3em;
+width: 100%;
+text-align: center;
+background-size: cover;
+text-transform: capitalize;
+text-shadow: 0em 0em 1em rgba(0,0,0,0.7);
+position: absolute;
+top: -2.5em;
+font-family: "Lobster";
+}
+
+#why-book-with h3 br {
+  display: none;
+}
+#why-book-with ul {
+  display: table;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 60em;
+}
+#why-book-with ul li {
+  display: table-cell;
+  width: 33.3%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 1em;
+}
+.booking-details {
+  width: 100%;
+  border-radius: 2em;
+  position: relative;
+  text-align: center;
+  padding: 2em 1em 1em 1em;
+  background-size: 55em;
+  background-position: center;
+}
+.booking-details img {
+  position: absolute;
+  height: 100%;
+}
+.booking-details p {
+color: #333;
+line-height: 1.5em;
+font-size: 1.25em;
+}
+.booking-img-container {
+background: #137547;
+border: 0.25em solid #faf0ca;
+height: 6em;
+width: 6em;
+position: absolute;
+overflow: hidden;
+border-radius: 50%;
+left: 50%;
+transform: translateX(-50%);
+top: -4em;
+}
+.booking-img-container:after{
+content:"";
+position: relative;
+}
+.booking-details h3 {
+  text-align: center;
+  font-size: 1.33em;
+  text-transform: capitalize;
+  color: #0d3b66;
+  margin-bottom: 1em;
+  line-height: 1em;
+  margin-top: 1em;
+  font-weight: 800;
+}
+#book-with-cta {
+  background: #f7b801;
+  width: 92%;
+  display: block;
+  max-width: 11.35em;
+  margin: 0 auto;
+  margin-top: 0px;
+  padding: 0.5em;
+  font-size: 1.5em;
+  font-family: "oleo script", san-serif;
+  border-radius: 1em;
+  margin-top: 1em;
+  color: #9a031e;
+  text-transform: capitalize;
+}
+@media(max-width:900px){
+  #why-book-with ul {
+  display: block;
+  }
+  #why-book-with ul li {
+  display: block;
+    width: 100%;
+  margin-top: 2em;
+  } 
+  .booking-details{
+    max-width: 20em;
+    margin: 2em auto;
+  }
+}
+@media(max-width:750px){
+  #header-main{
+    padding: 2em;
+  }
+}
+/*=====================*/
+.footer {
+  width: 100%;
+  padding: 4em 0em 2em 0em;
+  font-size: 1em;
+  background: rgb(13, 59, 102);
+  text-align: center;
+}
+#logo-footer{
+  display: inline-block;
+  color: white;
+font-family: "Rock Salt", Verdana, Geneva, Tahoma, sans-serif;
+}
+#logo-footer b{
+  font-size: 2.25em;
+  font-weight: lighter;
+  line-height: 1em;
+  text-transform: capitalize;
+}
+#logo-footer span{
+  font-size: 0.8em;
+  font-family: "Rock Salt", Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: -1em;
+  display: block;
+}
+.footer img {
+	width: 10em;
+}
+.footer header{
+  margin: 0 auto;
+  height: 6em;
+  text-align: center;
+  display: inline-block;
+}
+.footer header a {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  color: white !important;
+}
+.footer header img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 5em;
+}
+.footer header h2{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 2em;
+  color: white !important;
+  font-weight:bold;
+  font-family: 'Libre Baskerville',serif;
+  text-align: center;
+}
+.footer header hr{
+  border: 0.05em solid white;
+}
+.footer header h2 span {
+  font-size: 0.5em;
+  line-height: 2em;
+  color: white !important;
+  font-family: 'Libre Baskerville',serif;
+  display: block;
+}
+.social {
+ width:100%;
+ text-align:center
+}
+.social p {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  text-transform: capitalize;
+  color: white;
+  padding: 0.5em;
+}
+.social ul{
+  display: table;
+  width: 14em;
+  margin: 0 auto;
+}
+.social ul li{
+  display: table-cell;
+  width: 25%;
+  padding: 0.25em;
+}
+.social ul li a{
+  width: 100%;
+  display: block;
+  background-color: white;
+  border-radius: 2em;
+  padding: 0.25em;
+}
+.social ul li img {
+  width: 100%;
+  display: block;
+  opacity: 00.8;
+}
+.footer-section{
+  width: 100%;
+  padding: 1em;
+}
+.footer section ul{
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  margin-left: -5px;
+  text-align: center;
+}
+.footer section ul li{
+  width: 100%;
+  list-style-type: none;
+  line-height: 2em;
+}
+.footer section ul li b{
+  font-size: 1.3em;
+  color: white;
+  text-transform: capitalize;
+}
+.footer section ul li a{
+  display: inline-block;
+  color: white !important;
+  padding: 0.25em;
+  text-transform: capitalize;
+}
+@media(max-width:700px){
+  .footer section ul{
+    padding: 2em;
+  }
+  .footer section ul li a{
+    font-size: 1.2em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* accordion */
+
+.accordion{
+	width: 100%;
+	border: 0.5em solid #faf0ca;
+	max-width: 60em;
+	margin: 0 auto;
+}
+.accordion .tab{
+	width: 100%;
+	background: #faf0ca;
+	list-style-type: none;
+}
+.accordion .tab h2 {
+	padding: 1em;
+	text-align: center;
+	text-transform: capitalize;
+	font-weight: 100;
+	color: #e4dfda;
+	cursor: pointer;
+	font-size: 1.25em;
+	background: #0d3b66;
+	font-weight: 400;
+	cursor: pointer;
+}
+@media(max-width:750px){
+  .accordion .tab h2 {
+    background-color: #137547;
+  } 
+}
+.accordion .tab.active h2,
+.accordion .tab h2:hover{
+  color:#333;
+  background: #f4d35e;
+}
+.accordion .tab .content {
+	width: 100%;
+	padding: 3em;
+	text-align: center;
+	transform-origin: top;
+}
+.accordion .tab .content p {
+	font-size: 1.2em;
+	font-weight: 300;
+	line-height: 2em;
+	max-width: 40em;
+	margin: 0 auto;
+	width: 90%;
+}
+.accordion .tab .content{
+	display: none;
+}
+@-webkit-keyframes fadeIn {
+	0%{ transform: scaleY(0) }
+	100%{ transform: scaleY(1)}
+}
+@-moz-keyframes fadeIn {
+	0%{ transform: scaleY(0) }
+	100%{ transform: scaleY(1)}
+}
+.accordion .tab.active .content{
+	display: block;
+  height: auto;
+	-webkit-animation: fadeIn 0.3s ease-out;
+	-moz-animation: fadeIn 0.3s ease-out;
+}
+.accordion .tab .content a{
+background-color: #ffb627;
+  color: #02426d;
+  display: inline-block;
+  padding: 0.33em 1em;
+  font-size: 1.15em;
+  text-transform: capitalize;
+  margin-top: 0.5em;
+}	

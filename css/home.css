@@ -1,0 +1,549 @@
+/* only applies to home */
+body{
+    background-image: url("../images/oahu-road.jpg");
+	background-size: cover;
+    background-position: bottom center;
+	background-attachment: fixed;
+}
+@media(max-width:750px){
+    body{
+        background-image: none;
+        background-attachment: local;
+        background-color: #0D3B66;
+    }
+}
+/*=====*/
+#hero {
+    background-size: cover;
+    background-position: top left;
+    width: 100%;
+    /*! padding: 2em; */
+  }
+  #hero-top {
+    display: block;
+    width: 98%;
+    background-image: url("../images/gcitbanner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 28em;
+    border: 0.5em solid #FAF0CA;
+    max-width: 1200px;
+    margin: 1em auto;
+    position: relative;
+    box-shadow: inset 0em 0em 18em 1em #01466ba8;
+  }
+  #hero-top ul {
+    width: 100%;
+    display: block;
+  }
+  #hero-top ul li {
+    display: table-cell;
+    width: 50%;
+    padding: 2em 2em 1em 2em;
+    vertical-align: middle;
+  }
+  #hero-top-right {
+      text-align: right;
+  }
+  #hero-top ul li h1 {
+    color: #faf0ca;
+    font-size: 3em;
+    font-weight: normal;
+    text-shadow: 0em 0em 2em #000000a6;
+    font-family: "Lobster";
+    line-height: 1em;
+    text-transform: capitalize;
+    text-align: left;
+  }
+  #hero-top a {
+    color: #f4d35e;
+    font-size: 1.75em;
+    text-align: right;
+    display: block;
+    display: inline-block;
+    text-transform: capitalize;
+  }
+  #hero-top a b {
+    font-weight: bold;
+  }
+
+  @media (max-width: 500px) {
+    #hero {
+  margin: 0 auto;
+  padding: 0;
+    }
+    #hero-top ul li {
+      padding: 1em;
+    }
+  }
+  
+  #hero-bottom {
+    position: relative;
+    overflow: hidden;
+    margin: 0em auto;
+    width: 98%;
+    max-width: 1200px;
+    padding-bottom: 1em;
+  }
+@media(max-width:750px){
+  #hero-bottom {
+    padding-bottom: 2em;
+  }
+}
+
+#heading {
+  position: absolute;
+  right: 0em;
+  top: 3em;
+  text-align: center;
+}
+#heading h1 {
+  font-size: 4.5em;
+  font-family: "Lobster";
+  text-transform: capitalize;
+  width: 8em;
+  line-height: 1em;
+  color: #faf0ca;
+  text-shadow: 0em 0.15em 1em #002a67;
+}
+#cta {
+  position: absolute;
+  left: 2em;
+  bottom: 2em;
+}  
+#cta p{
+  font-size: 2.5em;
+  font-weight: 400;
+  line-height: 1em;
+  text-transform: capitalize;
+  color: #faf0ca;
+  text-shadow: 0em 0.15em 1em #002a67;
+}  
+#cta a{
+  background: #f95738;
+  display: inline-block;
+  padding: 0.5em;
+  margin: 1em auto;
+  box-shadow: 0em 0.15em 1em #00000087;
+  border: 0.15em solid #f4d35e;
+}  
+
+@media(max-width:1000px){
+  #heading{
+    top: 1em; 
+    right: 1em;
+    text-align: right;
+  }
+}
+
+@media(max-width:750px){
+  #hero-top{
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+@media(max-width:550px){
+  #heading{
+    top: 5em;
+    left: 0;
+    width: 100%;
+    right: auto;
+    text-align: center;
+  }
+  #heading h1{
+    font-size: 3.5em;
+    margin: 0 auto;
+  }
+  #cta{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+/*====== slider ======*/
+
+  #hero-slider {
+    position: relative;
+    height: 28em;
+    display: block;
+    margin: 0em auto 0em auto;
+    width: 100%;
+  }
+
+  .hero-slide {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    opacity: 0;
+    transition: 1s;
+    background-position: center;
+    overflow: hidden;
+    display: block;
+    max-width: 80em;
+    transform: translateX(-50%);
+    border: 0.5em solid #FAF0CA;
+  }
+  .hero-slide.active {
+    opacity: 0.9;
+  }
+  .hero-slide img {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 1;
+  }
+@media(max-width:650px){
+    .hero-slide img{
+      width: auto;
+      height: 100%;
+  }
+}
+
+  .hero-slider-content {
+    z-index: 2;
+    position: absolute;
+    left: 2em;
+    bottom: 2em;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    border-radius: 1em;
+    min-width: 25em;
+  }
+  .hero-slider-content h2 {
+    color: white;
+    font-size: 2.25em;
+    font-weight: bold;
+    max-width: 12em;
+    line-height: 1em;
+    text-shadow: 0em 0em 1em black;
+  }
+  .hero-slider-content h3 {
+    font-family: "Josefin Sans";
+    color: white;
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+  @media (max-width: 950px) {
+    .hero-slider-content h2 {
+      font-size: 2em;
+    }
+    .hero-slider-content {
+      bottom: 0em;
+      width: 100%;
+      left: 0;
+      border-radius: 0;
+      padding: 1em;
+    }
+  }
+  .hero-slider-content ul {
+    display: table;
+    width: 100%;
+    margin-top: 1em;
+  }
+  .hero-slider-content li {
+    display: table-cell;
+    width: 50%;
+    text-align: left;
+    color: white;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    font-weight: 300;
+  }
+  .hero-slider-content ul li span {
+    display: block;
+    font-size: 1.25em;
+    font-weight: 400;
+  }
+  
+  .hero-slider-content button {
+    display: block;
+    border-radius: 5em;
+    background-color: #f4d35e;
+    padding: 0.25em;
+    text-align: right;
+    margin-top: 0.5em;
+    max-width: 13em;
+    font-size: 0.8em;
+    float: right;
+    border: 0;
+    cursor: pointer;
+  }
+  .hero-slider-content button span {
+    display: inline-block;
+    vertical-align: middle;
+    color: #0d3b66;
+    text-transform: capitalize;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-left: 0.5em;
+    line-height: 1.75em;
+  }
+  .hero-slider-content button .material-symbols-outlined {
+    color: #e5c960;
+    background-color: #0d3b66;
+    border-radius: 5em;
+    padding: 0.075em 0.05em 0.075em 0.15em;
+    font-size: 2em;
+    margin-left: 0.25em;
+    width: 1.2em;
+    vertical-align: middle;
+    line-height: 1em;
+  }
+
+
+#tour-details {
+	margin: 0 auto;
+	width: 100%;
+	padding: 1em;
+
+}
+.description {
+  padding: 0.15em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.description p {
+  font-family: "Lobster";
+  color: #FAF0CA;
+  font-size: 4em;
+  text-transform: capitalize;
+  text-shadow: 0em 0em 1em #02416eab;
+  line-height: 1em;
+}
+
+.description span{
+    color: #f9efc966;
+    font-size: 0.5em;
+    direction: inline-block;
+    vertical-align: top;
+}
+
+#tour-slider{
+    width: 100%;
+    display: table;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#tour-slider-nav{
+    display: table-cell;
+    width: 33%;
+    padding: 1em;
+    vertical-align: top;
+}
+.tour-slide-nav-button{
+    display: block;
+    width: 100%;
+    margin: 1em auto;
+    text-align: center;
+    padding: 1em;
+    background: #137547;
+    color: white;
+    font-family: "Josefin Sans";
+    font-size: 1.25em;
+    border: 0.2em solid #FAF0CA;
+    text-transform: capitalize;
+    box-shadow: 0em 0em 1em #02416eab;
+    cursor: pointer;
+}
+.tour-slide-nav-button.active{
+    background-color: #f4d35e;
+    color: #0d3b66;
+}
+#tour-slides{
+    display: table-cell;
+    width: 66%;
+    padding: 1em;
+    vertical-align: middle;
+}
+.tour-slides{
+    width: 100%;
+    max-width: 40em;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.tour-slide{
+    width: 100%;
+    /*! max-width: 40em; */
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    height: 30em;
+    border: 0.5em solid #FAF0CA;
+    box-shadow: 0em 0em 1em #02416eab;
+}
+.tour-slide img{
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 0;
+}
+.tour-slide article{
+    padding: 2em;
+    text-align: left;
+    display: block;
+    max-width: 40em;
+    z-index: 9;
+    position: absolute;
+    bottom: 0;
+}
+.tour-slide article a{
+    background-color: rgba(0, 31, 49, 0.83);
+    display: block;
+    padding: 2em;
+}
+.tour-slide article h2{
+    color: white;
+    text-transform: capitalize;
+    text-shadow: 0em 0em 0.5em rgba(0,0,0,0.5), 0em 0em 1em rgba(0,0,0,0.5);
+    font-size: 2em;
+}
+
+.tour-slide article h2 .material-symbols-outlined {
+  background: none;
+  color: white;
+  padding: 0;
+  margin: 0;
+  vertical-align: sub;
+}
+.tour-slide article p{
+    color: white;
+    line-height: 2em;
+    width: 100%;
+    display: block;
+    text-shadow: 0em 0em 1em black;
+    font-weight: 300;
+}
+.tour-slide{
+    display: none;
+}
+.tour-slide.active{
+    display: block;
+}
+
+.tour-slide-back,
+.tour-slide-fwd{
+  position: absolute;
+  top: 1em;
+  background: none;
+  color: white;
+  font-size: 4em;
+  line-height: 0;
+  border: 0;
+  z-index: 5;
+  cursor: pointer;
+}
+.tour-slide-back .material-symbols-outlined {
+  letter-spacing: 0em;
+  line-height: 0.5;
+  margin-left: -0.05em;
+}
+.tour-slide-fwd .material-symbols-outlined {
+  letter-spacing: 0em;
+  line-height: 0.5;
+  margin-right: -0.1em;
+}
+.tour-slide-back::before,
+.tour-slide-fwd::before{
+    content: "";
+    height: 0.65em;
+    width: 0.65em;
+    position: absolute;
+    background: black;
+    border-radius: 50%;
+    opacity: 0.33;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.tour-slide-back {
+  left: 0;
+}
+.tour-slide-fwd {
+  right: 0em;
+}
+.tour-slide article span {
+	background-color: #f4d35e;
+	color: #0d3b66;
+	display: inline-block;
+	padding: 0.33em 1em;
+	font-size: 1.15em;
+	text-transform: capitalize;
+	margin-top: 0.5em;
+}
+.tour-slide article h2 .small{
+    color: white;
+    font-size: 0.5em;
+    background: none;
+    padding: 0;
+}
+@media(max-width:940px){
+  .tour-slide img{
+    height: 100%;
+    width: auto;
+  }
+}
+@media(max-width:750px){
+    #tour-slider,
+    #tour-slider-nav,
+    #tour-slides{
+       display: block;
+       width: 100%;
+       text-align: center;
+       padding: 1em 0em 0.5em 0em;
+    }
+    #tour-slider-nav{
+        border: 0.25em solid #FAF0CA;
+        padding: 0;
+    }
+    .tour-slide-nav-button{
+        margin: 0;
+        box-shadow: none;
+    }
+    .tour-slide img{
+      height: auto;
+      width: 100%;
+    } 
+}
+@media(max-width:545px){
+  .tour-slide img{
+    height:100%;
+    width:auto;
+  }
+  #tour-details{
+    padding: 0;
+  }
+}
+#tour-details aside {
+  text-align: right;
+  padding: 0em 0em;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 1.15em;
+  width: 90%;
+  margin-top: 0.5em;
+}
+#tour-details aside a{
+    color: white;
+    text-shadow: 0em 0em 0.5em black;
+    max-width: 20em;
+    display: inline-block;
+    text-align: left;
+}
+
+#additional-tour-details {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
